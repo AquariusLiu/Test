@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,57 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbs-Lv-lVT">
+                                <rect key="frame" x="24" y="248" width="552" height="104"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvs-64-h42">
+                                        <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJi-Xx-vKd">
+                                        <rect key="frame" x="253" y="66" width="46" height="30"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xR9-hz-j6G">
+                                        <rect key="frame" x="8" y="37" width="536" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xR9-hz-j6G" secondAttribute="trailing" constant="8" id="0TP-rP-njO"/>
+                                    <constraint firstItem="tvs-64-h42" firstAttribute="leading" secondItem="wbs-Lv-lVT" secondAttribute="leading" constant="8" id="Blg-Sv-eVT"/>
+                                    <constraint firstAttribute="bottom" secondItem="bJi-Xx-vKd" secondAttribute="bottom" constant="8" id="ECD-Uv-z4F"/>
+                                    <constraint firstItem="tvs-64-h42" firstAttribute="top" secondItem="wbs-Lv-lVT" secondAttribute="top" constant="8" id="Hex-ZW-ibP"/>
+                                    <constraint firstItem="bJi-Xx-vKd" firstAttribute="top" secondItem="xR9-hz-j6G" secondAttribute="bottom" constant="8" id="Xd5-Eu-7Kk"/>
+                                    <constraint firstAttribute="centerX" secondItem="bJi-Xx-vKd" secondAttribute="centerX" id="tOz-o3-ewt"/>
+                                    <constraint firstItem="xR9-hz-j6G" firstAttribute="top" secondItem="tvs-64-h42" secondAttribute="bottom" constant="8" id="umJ-b6-1gH"/>
+                                    <constraint firstItem="xR9-hz-j6G" firstAttribute="leading" secondItem="wbs-Lv-lVT" secondAttribute="leading" constant="8" id="x0H-nq-3vb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wbs-Lv-lVT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="3j6-yb-U9v"/>
+                            <constraint firstAttribute="centerY" secondItem="wbs-Lv-lVT" secondAttribute="centerY" id="Lw3-xN-8aS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wbs-Lv-lVT" secondAttribute="trailing" constant="8" id="uY7-rm-0C2"/>
+                            <constraint firstAttribute="centerX" secondItem="wbs-Lv-lVT" secondAttribute="centerX" id="vjQ-i5-d0j"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="xR9-hz-j6G" id="Zta-Cw-l6n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="321" y="372"/>
         </scene>
     </scenes>
 </document>

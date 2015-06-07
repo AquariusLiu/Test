@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *label;
+
 @end
 
 @implementation ViewController
@@ -17,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _label.text = @"123\n456781238018294128412984129847192841123456\n123";
 }
 
 - (void)didReceiveMemoryWarning {
